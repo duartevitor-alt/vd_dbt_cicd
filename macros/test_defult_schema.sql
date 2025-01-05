@@ -2,7 +2,9 @@
     {%- set default_schema = target.schema -%}
         {%- if custom_schema_name is none -%}
             {{ default_schema }}
+        {%- elif target.name == "default" -%}
+            {{ default_schema }}
         {%- else -%}
-            {{ custom_schema_name | trim }}
+            {{ custom_schema_name | trim | upper}}
         {%- endif -%}
 {%- endmacro %}

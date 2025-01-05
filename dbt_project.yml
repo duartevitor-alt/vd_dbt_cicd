@@ -41,3 +41,5 @@ models:
     staging:
       +schema: staging_test
       +materialized: table
+    refined:
+      +schema: refined
